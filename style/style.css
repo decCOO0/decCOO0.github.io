@@ -1,141 +1,153 @@
-body{
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  background-color: #FFDFC9;
-}
 
-*{
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
+
+
+
+body{
+    display: flex;
+    flex-direction: column;
+        align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    
 }
 
 .global-header{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 35px;
-  width: 100%;
-  background-color:#FFDFC9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
-.left-side, .right-side{
-  display: flex;  
-  min-height: 75px;
-  padding: 5px;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.left-side{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
-nav{
-  display: flex;
-  gap: 20px;        
-  padding: 5px;
-
+.left-side span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .logo{
-  color: black;
+    width: 300px;
 }
 
-nav a{
-  text-decoration: none;
-  color: black;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  font-size: 25px;
-  padding: 5px;
+.right-side{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-top: 20px;
 }
 
-nav a:hover{
-  color: #CA652C;
+.right-side li{
+    list-style: none;
+    margin-left: 25px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
-main{
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: row;
-  width: 100%;
+li a{
+    color: #000000;
+    text-decoration: none;
+}
+
+li a:hover{
+    color: orangered;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+
+.global__main{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 70px;
+    width: 100%;
+    padding-top: 50px;
+    flex-wrap: wrap;
+}
+
+.global__main span{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
 }
 
 .container{
-  display: flex;  
-  width: 100vw;
-  padding: 5px;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 30px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
-h1{
-  margin-left: 170px;
-  width: 60%;
-  font-size: 85px;
-  font-family: 'Poppins', sans-serif;
+.list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 300px;
+    height: 400px;
 }
 
-.food{
-  position: relative;
-  left: 170px;
-  top: -130px;
+.item--row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    background-color: white;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
-.main-img{
-  display: flex;
-  position: relative;
-  
+.price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
-.coment{
-  position: relative;
-  top: 500px;
-  left: -450px;
-  color: black;
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  color: #9C897F;
+.title{
+    font-size: 25px;
 }
 
-.btn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  top: 600px;
-  left: -780px;
-  border: none;
-  width: 300px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: #CA652C;
-  color: #fff;
+.sub-title{
+    width: 300px;
+    margin-left: 40px;
+    color: rgb(161, 160, 160);
 }
 
-.vector{
-  margin-left: 10px;
-  height: 15px;
+.view img{
+    width: 300px;
+    height: 230px;
+    margin-left: 50px;
+    background-color: silver;
 }
 
-
-@media screen and (max-width: 728px) {
-  .global-header, .left-side, .right-side{
+.column{
+    padding: 20px 0;
     flex-direction: column;
-  }
-
-  nav{
-    flex-direction:column;
-  }
-
-  nav a{
-    min-width: 90vw;
-    text-align: center;
-  }
-  .logo{
-    display: none;
-  }
+    gap: 5px;
 }
+
