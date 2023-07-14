@@ -1,17 +1,11 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
-
-
-
 body{
     display: flex;
-    flex-direction: column;
-        align-items: center;
-    justify-content: flex-start;
     margin: 0;
     padding: 0;
-    
+    flex-direction: column;
 }
+
+/* HEADER */
 
 .global-header{
     display: flex;
@@ -19,135 +13,451 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    flex-wrap: wrap;
 }
 
-.left-side{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.left-side span{
+.left{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
-    font-size: 20px;
-    font-family: 'Nunito Sans', sans-serif;
+    margin-left: 100px;
+    gap: 14px;
 }
 
-.logo{
-    width: 300px;
+.left img{
+    width: 260px;
+    height: 60px;
 }
 
-.right-side{
+.right{
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin-right: 50px;
-    margin-top: 20px;
+    justify-content: center;
+    margin-right: 100px;
 }
 
-.right-side li{
-    list-style: none;
-    margin-left: 25px;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-li a{
-    color: #000000;
+.right a{
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #414840;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 40px;
+    text-transform: uppercase;
 }
 
-li a:hover{
-    color: orangered;
-    font-family: 'Nunito Sans', sans-serif;
+.right a:hover{
+    color: #475F45;
+}
+
+.header-btn{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 10px;
+    border: 2px solid #475F45;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: 40px;
 }
 
 
 
-.global__main{
+/* MAIN */
+
+
+.global-main{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 70px;
+    align-items: flex-start;
+    justify-content: space-between;
     width: 100%;
-    padding-top: 50px;
-    flex-wrap: wrap;
 }
 
-.global__main span{
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 600;
+.main-left--side{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 100px;
 }
+.main-left--side h1{
+    margin-top: 310px;
+    color: #343D33;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: capitalize;
+}
+
+.main-left--side span{
+    font-family: 'Roboto', sans-serif;
+    width: 470px;
+    font-weight: 300;
+    font-size: 25px;
+    color: #414840;
+    line-height: 150%;
+}
+
+.main-btn{
+    display: flex;
+    flex-direction: row;
+}
+
+.main-tickets, .main-learn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 40px;
+    background-color: #475F45;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 32px;
+}
+
+.main-learn{
+    background: none;
+    border: 2px solid #475F45;
+    color: #475F45;
+    margin-left: 16px;
+}
+
+.main-right--side{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 120px;
+}
+
+.main-right--side img{
+    margin-top: 56px;
+    width: 460px;
+    height: 650px;
+    border: 4px solid rgba(52, 61, 51, 1);
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+    padding: 10px;
+}
+
+
+
+
+/* CONTAINER */
+
+
 
 .container{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
-    gap: 30px;
+    flex-direction: column;
     width: 100%;
+    height: 1035px;
+    background-color: #343D33;
+    margin-top: 125px;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-top: -55px;
 }
 
-.list-item{
+.top img{
+    margin-left: 435px;
+    margin-top: 95px;
+}
+
+.top h1{
+    margin-left: 89px;
+    margin-top: -125px;
+    width: 415px;
+    color: #fff;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: capitalize;
+}
+
+.top span{
+    margin-left: -410px;
+    margin-top: 228px;
+    width: 400px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.container-btn{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
-
-    width: 300px;
-    height: 400px;
+    padding: 20px 40px;
+    display: inline-flex;
+    gap: 10px;
+    background: none;
+    border: 2px solid #fff;
+    color: var(--white, #FFF);
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;  
+    margin-top: 470px;
+    margin-left: -400px;
 }
 
-.item--row{
+.bottom{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
 
+
+
+
+/* CONTENT */
+
+
+
+.content{
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    background-color: white;
-    font-family: 'Nunito Sans', sans-serif;
+    align-items: center;
+    justify-content: space-around;
+    height: 870px;
 }
 
-.price{
+.left-container{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    font-family: 'Nunito Sans', sans-serif;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 100px;
 }
 
 .title{
-    font-size: 25px;
-}
-
-.sub-title{
-    width: 300px;
-    margin-left: 40px;
-    color: rgb(161, 160, 160);
-}
-
-.view img{
-    width: 300px;
-    height: 230px;
-    margin-left: 50px;
-    background-color: silver;
-}
-
-.column{
-    padding: 20px 0;
+    display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.title h1{
+    margin-top: -30px;
+    margin-left: 100px;
+    color: #343D33;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: capitalize;
+}
+
+.stick{
+    display: flex;
+    flex-direction: row;
+    width: 130px;
+    height: 2px;
+    background-color: #475F45;
+    margin-left: 100px;
+}
+
+.title span{
+    color: #475F45;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 250px;
+    margin-top: -9px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.title img{
+    margin-left: 395px;
+    margin-top: -20px;
+}
+
+.plants{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.plants h1{
+    width: 280px;
+    color: #475F45;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 110%;
+    margin-left: 20px;
+}
+
+.plants span{
+    margin-left: 20px;
+    width: 470px;
+    height: 70px;
+    color: #414840;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.plants span:nth-child(4){
+    color:#343D33;
+    margin-top: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+
+.right-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 210px;
+    margin-left: 50px;
+}
+
+.gardens{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.gardens h1{
+    width: 280px;
+    color: #475F45;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 110%;
+    margin-left: 100px;
+}
+
+.gardens span{
+    margin-top: 50px;
+    margin-left: -300px;
+    width: 350px;
+    color: #414840;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.gardens span:nth-child(4){
+    color:#343D33;
+    margin-top: 110px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.nature{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.nature h1{
+    width: 280px;
+    color: #475F45;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 110%;
+    margin-left: 100px;
+}
+
+.nature span{
+    margin-top: 50px;
+    margin-left: -300px;
+    width: 350px;
+    color: #414840;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.nature span:nth-child(4){
+    color:#343D33;
+    margin-top: 110px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.soil{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.soil h1{
+    width: 280px;
+    color: #475F45;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 110%;
+    margin-left: 100px;
+}
+
+.soil span{
+    margin-top: 50px;
+    margin-left: -300px;
+    width: 350px;
+    color: #414840;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.soil span:nth-child(4){
+    color:#343D33;
+    margin-top: 110px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
 }
 
