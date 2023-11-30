@@ -6,7 +6,10 @@ const todayWeatherIcon = document.querySelector('.today-weather i');
 const todayTemp = document.querySelector('.weather-temp');
 const daysList = document.querySelector('.days-list');
 const day = document.querySelector('.day-theme');
-const night = document.querySelector('.night-theme')
+const night = document.querySelector('.night-theme');
+const savedQueries = JSON.parse(localStorage.getItem('queries')) || [];
+const queryList = document.getElementById('queryList');
+const MAX_QUERIES = 5;
 
 const weatherIconMap = {
     '01d': 'sun',
@@ -111,39 +114,57 @@ document.addEventListener('DOMContentLoaded', () => {
 locButton.addEventListener('click', () => {
     const location = prompt('Enter a location :');
     if (!location) return;
-
     fetchWeatherData(location);
+
+    const newQuery = location;
+    if (newQuery === '') {
+      alert('Please enter a query.');
+      return;
+    }
+    savedQueries.unshift(newQuery);
+    if (savedQueries.length > MAX_QUERIES) {
+      savedQueries.pop();
+    }
+    localStorage.setItem('queries', JSON.stringify(savedQueries));
+    updateQueryList();
 });
 
 day.addEventListener('click', (e) => {
     e.preventDefault();
-    let change = (
-        document.body.style.backgroundColor = "#649ebb",
-        rInfo.style.backgroundColor = 'white',
-        rInfo.style.color = 'black',
-        rInfo.style.borderRadius = 25 + 'px',
-        rInfo.style.position = 'relative',
-        rInfo.style.float = 'right'
-    )
-});
-
-day.addEventListener('click', (e) => {
-    e.preventDefault();
-        document.body.style.backgroundColor = '#649ebb';
-        rInfo.style.backgroundColor = 'white';
-        rInfo.style.color = 'black';
-        rInfo.style.borderRadius = 25 + 'px';
-        rInfo.style.position = 'relative';
-        rInfo.style.float = 'right';
+    document.body.style.backgroundColor = '#649ebb';
+    rInfo.style.backgroundColor = '#fff';
+    rInfo.style.color = '#0e0e0e';
+    rInfo.style.borderRadius = 25 + 'px';
+    rInfo.style.position = 'relative';
+    rInfo.style.float = 'right';
 });
 
 night.addEventListener('click', (e) => {
     e.preventDefault();
-        document.body.style.backgroundColor = '#37474f';
-        rInfo.style.backgroundColor = '#232931';
-        rInfo.style.color = 'white';
-        rInfo.style.borderRadius = 25 + 'px';
-        rInfo.style.position = 'relative';
-        rInfo.style.float = 'right';
+    document.body.style.backgroundColor = '#37474f';
+    rInfo.style.backgroundColor = '#232931';
+    rInfo.style.color = '#fff';
+    rInfo.style.borderRadius = 25 + 'px';
+    rInfo.style.position = 'relative';
+    rInfo.style.float = 'right';
 });
+
+updateQueryList();
+
+function updateQueryList() {
+    queryList.innerHTML = '';
+    savedQueries.forEach((query, index) => {
+    const listItem = document.createElement('li');
+    listItem.className = 'queryItem';
+    listItem.textContent = query;
+    listItem.addEventListener('click', () => restoreQuery(index));
+    queryList.appendChild(listItem);
+    });
+  }
+
+function restoreQuery(index) {
+    const selectedQuery = savedQueries[index];
+    alert(`Restoring data for query: ${selectedQuery}`);
+    fetchWeatherData(selectedQuery);
+}
 
